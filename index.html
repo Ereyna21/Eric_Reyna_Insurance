@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eric Reyna Insurance</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header class="hero">
+    <nav>
+      <h2>Eric Reyna Insurance</h2>
+      <a href="#contact" class="nav-btn">Request a Quote</a>
+    </nav>
+
+    <div class="hero-content">
+      <h1>Protecting Families. Building Legacies.</h1>
+      <p>Helping families understand life insurance and find coverage that fits their goals, budget, and future.</p>
+      <a href="#contact" class="btn">Start Your Quote</a>
+    </div>
+  </header>
+
+  <section class="about">
+    <h2>My Life Insurance Journey</h2>
+    <p>
+      My name is Eric Reyna, and I am a licensed Texas General Lines Agent for Life, Accident, Health & HMO.
+      My goal is to help families make informed decisions about protecting their loved ones through simple,
+      honest, and pressure-free conversations.
+    </p>
+  </section>
+
+  <section class="services">
+    <h2>Coverage Solutions</h2>
+    <div class="cards">
+      <div class="card">Term Life Insurance</div>
+      <div class="card">Whole Life Insurance</div>
+      <div class="card">Final Expense</div>
+      <div class="card">Mortgage Protection</div>
+      <div class="card">Indexed Universal Life</div>
+      <div class="card">Annuities</div>
+    </div>
+  </section>
+
+  <section class="carriers">
+    <h2>Carrier Access</h2>
+    <p>Carrier availability may vary by state, product type, underwriting, and appointment status.</p>
+
+    <div class="carrier-grid">
+      <span>American Amicable</span>
+      <span>Americo</span>
+      <span>F&G</span>
+      <span>Foresters</span>
+      <span>Banner Life</span>
+      <span>Mutual of Omaha</span>
+      <span>SBLI</span>
+      <span>United Home Life</span>
+      <span>Corebridge</span>
+      <span>Transamerica</span>
+      <span>American Equity</span>
+      <span>Assurity</span>
+      <span>Athene</span>
+      <span>Gerber</span>
+      <span>National Life Group</span>
+      <span>Royal Neighbors</span>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Request a Free Consultation</h2>
+
+    <form name="quote-request" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="quote-request" />
+
+      <input type="text" name="name" placeholder="Full Name" required />
+      <input type="email" name="email" placeholder="Email Address" required />
+      <input type="tel" name="phone" placeholder="Phone Number" />
+      <textarea name="message" placeholder="Tell me what type of coverage you're interested in"></textarea>
+
+      <button type="submit">Submit Request</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2026 Eric Reyna Insurance. Licensed Texas General Lines Agent.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
