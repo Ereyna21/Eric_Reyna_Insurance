@@ -272,3 +272,35 @@
       text-align: left;
     }
   }
+  
+  .profile-photo {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 20px;
+    border: 5px solid #d4af37;
+  }
+  
+  .importance {
+    background: #ffffff;
+  }
+  
+  .process {
+    background: #f8f9fb;
+  }
+  
+  .floating-contact {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: #d4af37;
+    color: #0b1f3a;
+    padding: 14px 22px;
+    border-radius: 40px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    z-index: 999;
+  }
