@@ -230,10 +230,15 @@ section h2 {
   margin-bottom: 20px;
 }
 
-.about p,
-.carriers p {
-  max-width: 850px;
-  margin: 0 auto 15px;
+.about {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about p {
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+  line-height: 1.8;
 }
 
 .cards,
@@ -395,4 +400,24 @@ footer {
   .trust-card {
     text-align: left;
   }
+}
+
+.services .card {
+  transition: all 0.3s ease;
+}
+
+.services .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.services .card h3 {
+  color: #0b1f3a;
+  margin-bottom: 12px;
+}
+
+.services .card p {
+  font-weight: normal;
+  color: #555;
+  line-height: 1.7;
 }
