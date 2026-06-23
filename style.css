@@ -230,6 +230,13 @@ section h2 {
   margin-bottom: 20px;
 }
 
+.section-intro {
+  max-width: 750px;
+  margin: 0 auto 35px;
+  font-size: 1.1rem;
+  color: #4b5563;
+}
+
 .about {
   max-width: 900px;
   margin: 0 auto;
@@ -288,10 +295,71 @@ section h2 {
   margin-bottom: 10px;
 }
 
-/* Why / Process */
-.why,
-.process {
+/* Why */
+.why {
   background: #f8f9fb;
+}
+
+/* Services */
+.services .card {
+  transition: all 0.3s ease;
+}
+
+.services .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.services .card h3 {
+  color: #0b1f3a;
+  margin-bottom: 12px;
+}
+
+.services .card p {
+  font-weight: normal;
+  color: #555;
+  line-height: 1.7;
+}
+
+/* Carrier Logos */
+.carriers {
+  background: #ffffff;
+}
+
+.carrier-grid {
+  max-width: 1100px;
+  margin: 35px auto 0;
+}
+
+.carrier-card {
+  background: white;
+  border-radius: 16px;
+  padding: 25px;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.carrier-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.carrier-logo {
+  max-width: 160px;
+  max-height: 65px;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.carrier-card h3 {
+  color: #0b1f3a;
+  font-size: 1rem;
+  text-align: center;
 }
 
 /* FAQ */
@@ -316,6 +384,69 @@ section h2 {
 .faq-item h3 {
   margin-bottom: 10px;
   color: #0b1f3a;
+}
+
+/* 3 Easy Steps Section */
+.steps-section {
+  background: #0b1f3a;
+  color: white;
+}
+
+.steps-section h2 {
+  color: white;
+}
+
+.steps-section .section-intro {
+  color: #dbe4f0;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.step-card {
+  background: rgba(255, 255, 255, 0.08);
+  padding: 35px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.step-card span {
+  background: #d4af37;
+  color: #0b1f3a;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+
+.step-card h3 {
+  margin-bottom: 12px;
+  color: white;
+}
+
+.step-card p {
+  color: #dbe4f0;
+}
+
+/* Process */
+.process {
+  background: #f8f9fb;
 }
 
 /* Contact */
@@ -379,6 +510,18 @@ footer a:hover {
   color: #d4af37;
 }
 
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.social-links a {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 14px;
+  border-radius: 20px;
+}
+
 .footer-bottom {
   text-align: center;
   border-top: 1px solid rgba(255, 255, 255, 0.2);
@@ -386,6 +529,7 @@ footer a:hover {
   margin-top: 20px;
 }
 
+/* Floating Button */
 .floating-contact {
   position: fixed;
   right: 20px;
@@ -435,57 +579,16 @@ footer a:hover {
   .trust-card {
     text-align: left;
   }
-}
 
-.services .card {
-  transition: all 0.3s ease;
-}
+  .step-card {
+    text-align: center;
+  }
 
-.services .card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
-}
+  .footer-content {
+    text-align: center;
+  }
 
-.services .card h3 {
-  color: #0b1f3a;
-  margin-bottom: 12px;
-}
-
-.services .card p {
-  font-weight: normal;
-  color: #555;
-  line-height: 1.7;
-}
-
-.carrier-card {
-  background: white;
-  border-radius: 16px;
-  padding: 25px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 140px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, .08);
-  transition: all .3s ease;
-}
-
-.carrier-card:hover {
-  transform: translateY(-6px);
-}
-
-.carrier-logo {
-  max-width: 180px;
-  max-height: 70px;
-  object-fit: contain;
-}
-
-.carrier-card {
-  height: 140px;
-}
-
-.carrier-logo {
-  max-width: 160px;
-  max-height: 60px;
-  width: auto;
-  height: auto;
+  .social-links {
+    justify-content: center;
+  }
 }
