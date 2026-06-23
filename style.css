@@ -457,7 +457,7 @@ footer a:hover {
   line-height: 1.7;
 }
 
-.carrier-logo {
+.carrier-card {
   background: white;
   border-radius: 16px;
   padding: 25px;
@@ -469,19 +469,12 @@ footer a:hover {
   transition: all .3s ease;
 }
 
-.carrier-logo:hover {
+.carrier-card:hover {
   transform: translateY(-6px);
-}
-
-.carrier-logo img {
-  max-width: 180px;
-  max-height: 70px;
-  object-fit: contain;
 }
 
 .carrier-logo {
   max-width: 180px;
   max-height: 70px;
   object-fit: contain;
-  filter: brightness(0);
 }
