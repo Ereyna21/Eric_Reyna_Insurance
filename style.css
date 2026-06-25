@@ -321,6 +321,19 @@ section h2 {
   line-height: 1.7;
 }
 
+.services .cards {
+  max-width: 1050px;
+  margin: 35px auto 0;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.services .card {
+  min-height: 240px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 /* Carrier Logos */
 .carriers {
   background: #ffffff;
@@ -613,5 +626,13 @@ footer a:hover {
 
   .social-links {
     justify-content: center;
+  }
+
+  .services .cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .services .card {
+    min-height: auto;
   }
 }
