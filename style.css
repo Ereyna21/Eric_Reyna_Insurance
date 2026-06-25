@@ -329,13 +329,16 @@ section h2 {
 .carrier-grid {
   max-width: 1100px;
   margin: 35px auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
 }
 
 .carrier-card {
   background: white;
   border-radius: 16px;
   padding: 25px;
-  height: 140px;
+  height: 135px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -349,19 +352,39 @@ section h2 {
 }
 
 .carrier-logo {
-  max-width: 160px;
-  max-height: 65px;
-  width: auto;
-  height: auto;
+  width: 100%;
+  max-width: 170px;
+  max-height: 70px;
   object-fit: contain;
 }
 
-.carrier-card h3 {
-  color: #0b1f3a;
-  font-size: 1rem;
-  text-align: center;
+.carrier-logo[alt="Foresters"] {
+  max-width: 190px;
 }
 
+.carrier-logo[alt="SBLI"] {
+  max-width: 145px;
+  max-height: 75px;
+}
+
+.carrier-logo[alt="F&G"] {
+  max-width: 90px;
+  max-height: 75px;
+}
+
+.carrier-logo[alt="Transamerica"] {
+  max-width: 150px;
+}
+
+.carrier-logo[alt="Royal Neighbors of America"] {
+  max-width: 115px;
+  max-height: 80px;
+}
+
+.carrier-logo[alt="United Home Life"] {
+  max-width: 105px;
+  max-height: 80px;
+}
 /* FAQ */
 .faq {
   background: white;
