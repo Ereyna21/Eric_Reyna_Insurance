@@ -501,6 +501,17 @@ form {
   gap: 15px;
 }
 
+form button {
+  width: 100%;
+  background: #d4af37;
+  color: #0b1f3a;
+  padding: 14px 22px;
+  border-radius: 30px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
 input,
 textarea {
   padding: 14px;
@@ -588,6 +599,41 @@ footer a:hover {
     width: 220px;
     text-align: center;
   }
+
+  /* Buttons */
+.btn,
+button {
+  background: #d4af37;
+  color: #0b1f3a;
+  padding: 12px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover,
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(212, 175, 55, 0.35);
+}
+
+.secondary-btn {
+  border: 2px solid #d4af37;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.secondary-btn:hover {
+  background: #d4af37;
+  color: #0b1f3a;
+}
 
   .hero-layout {
     padding-top: 40px;
