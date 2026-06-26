@@ -1,6 +1,16 @@
 const calculator = document.getElementById("needsCalculator");
 const resultBox = document.getElementById("calculatorResult");
 
+if ("scrollRestoration" in history) {
+    history.scrollRestoration = "manual";
+  }
+  
+  window.addEventListener("load", () => {
+    if (!window.location.hash) {
+      window.scrollTo(0, 0);
+    }
+  });
+
 if (calculator) {
   calculator.addEventListener("submit", function (event) {
     event.preventDefault();
