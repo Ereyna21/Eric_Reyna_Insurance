@@ -100,6 +100,27 @@ nav h2 {
   box-shadow: 0 12px 24px rgba(212, 175, 55, 0.35);
 }
 
+/* Buttons */
+.btn,
+button {
+  background: #d4af37;
+  color: #0b1f3a;
+  padding: 12px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover,
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(212, 175, 55, 0.35);
+}
+
+
 /* Hero Layout */
 .hero-layout {
   display: grid;
@@ -599,26 +620,6 @@ footer a:hover {
     width: 220px;
     text-align: center;
   }
-
-  /* Buttons */
-.btn,
-button {
-  background: #d4af37;
-  color: #0b1f3a;
-  padding: 12px 22px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.btn:hover,
-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 24px rgba(212, 175, 55, 0.35);
-}
 
 .secondary-btn {
   border: 2px solid #d4af37;
