@@ -18,6 +18,7 @@
         <a href="#">Home</a>
         <a href="#about">About</a>
         <a href="#services">Coverage</a>
+        <a href="#calculator">Calculator</a>
         <a href="#carriers">Carriers</a>
         <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
@@ -45,7 +46,7 @@
           <span>Licensed Texas Agent</span>
           <span>Multiple Carrier Access</span>
           <span>Free Consultation</span>
-          <span>Personalized Reviews</span>
+          <span>Personalized Recommendations</span>
         </div>
       </div>
 
@@ -120,9 +121,9 @@
 
   <section id="services" class="services">
     <h2>Coverage Solutions</h2>
-<p class="section-intro">
-  Explore different life insurance options designed to help protect your family, income, home, and future.
-</p>
+    <p class="section-intro">
+      Explore different life insurance options designed to help protect your family, income, home, and future.
+    </p>
 
     <div class="cards">
 
@@ -200,6 +201,39 @@
         <h3>Retirement Planning</h3>
         <p>Some policies and annuities can help support long-term financial goals.</p>
       </div>
+    </div>
+  </section>
+
+  <section id="calculator" class="calculator-section">
+    <h2>Life Insurance Needs Calculator</h2>
+    <p class="section-intro">
+      Get a quick estimate of how much life insurance coverage you may want to consider.
+    </p>
+  
+    <div class="calculator-box">
+      <form id="needsCalculator">
+        <input type="number" id="age" placeholder="Age" />
+  
+        <select id="married">
+          <option value="0">Are you married?</option>
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+  
+        <select id="children">
+          <option value="0">Do you have children?</option>
+          <option value="1">Yes</option>
+          <option value="0">No</option>
+        </select>
+  
+        <input type="number" id="mortgage" placeholder="Mortgage Balance" />
+        <input type="number" id="income" placeholder="Annual Income" />
+        <input type="number" id="existingCoverage" placeholder="Existing Life Insurance Coverage" />
+  
+        <button type="submit">Estimate Coverage</button>
+      </form>
+  
+      <div id="calculatorResult" class="calculator-result"></div>
     </div>
   </section>
 
@@ -346,6 +380,27 @@
 
       <button type="submit">Submit Request</button>
     </form>
+  </section>
+
+  <section class="disclaimer">
+    <div class="disclaimer-content">
+      <h3>Important Insurance Disclosure</h3>
+
+      <p>
+        As an independent licensed Texas General Lines Agent (Life, Accident, Health & HMO), I work with multiple
+        insurance carriers to help you compare coverage options that fit your needs and budget.
+      </p>
+
+      <p>Insurance coverage, premiums, and eligibility are determined by the issuing insurance company based on its
+        underwriting guidelines. Approval is not guaranteed until the application has been reviewed and accepted by the
+        carrier.</p>
+
+      <p>
+        The information provided on this website is intended for general educational purposes and should not be
+        considered legal, tax, or financial advice. If you have questions about your specific situation, I encourage you
+        to consult the appropriate professional.
+      </p>
+    </div>
   </section>
 
   <footer>
