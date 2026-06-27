@@ -18,24 +18,20 @@ if (calculator) {
     event.preventDefault();
 
     const income =
-  Number(
-    document.getElementById("income").value.replace(/[^\d]/g, "")
-  ) || 0;
+      Number(document.getElementById("income").value) || 0;
 
-const mortgage =
-  Number(
-    document.getElementById("mortgage").value.replace(/[^\d]/g, "")
-  ) || 0;
+    const mortgage =
+      Number(document.getElementById("mortgage").value) || 0;
 
-const existingCoverage =
-  Number(
-    document.getElementById("existingCoverage").value.replace(/[^\d]/g, "")
-  ) || 0;
+    const children =
+      Number(document.getElementById("children").value) || 0;
 
-const savings =
-  Number(
-    document.getElementById("savings").value.replace(/[^\d]/g, "")
-  ) || 0;
+    const existingCoverage =
+      Number(document.getElementById("existingCoverage").value) || 0;
+
+    const savings =
+      Number(document.getElementById("savings").value) || 0;
+
     // Calculation
 
     const incomeReplacement = income * 10;
