@@ -315,6 +315,8 @@ section h2 {
 .why-card {
   min-height: 230px;
   transition: all 0.3s ease;
+  padding: 32px 25px;
+  border: 1px solid #eef0f4;
 }
 
 .why-card:hover {
@@ -323,8 +325,16 @@ section h2 {
 }
 
 .why-icon {
-  font-size: 2rem;
-  margin-bottom: 15px;
+  width: 46px;
+  height: 46px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: #d4af37;
+  color: #0b1f3a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
 }
 
 @media (max-width: 900px) {
