@@ -100,6 +100,19 @@ nav h2 {
   box-shadow: 0 12px 24px rgba(212, 175, 55, 0.35);
 }
 
+/* ===========================
+   Mobile Hamburger Menu
+=========================== */
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
 /* Buttons */
 .btn,
 button {
@@ -667,26 +680,7 @@ footer a:hover {
 
 /* Mobile */
 @media (max-width: 900px) {
-  nav {
-    position: static;
-    flex-direction: column;
-    gap: 15px;
-    border-radius: 18px;
-    margin-bottom: 30px;
-  }
-
-  .nav-links {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-  }
-
-  .nav-btn {
-    width: 220px;
-    text-align: center;
-  }
-
-.secondary-btn {
+ .secondary-btn {
   border: 2px solid #d4af37;
   color: white;
   padding: 12px 22px;
@@ -857,4 +851,77 @@ footer a:hover {
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
+}
+
+/* ===========================
+   Mobile Navigation
+=========================== */
+
+@media (max-width: 900px) {
+
+  nav {
+    left: 16px;
+    right: 16px;
+    top: 10px;
+
+    padding: 16px 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  nav h2 {
+    font-size: 1.5rem;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-btn {
+    display: none;
+  }
+
+  .nav-links {
+    display: none;
+
+    position: absolute;
+    top: 82px;
+    left: 0;
+    right: 0;
+
+    flex-direction: column;
+    gap: 0;
+
+    background: rgba(11,31,58,.98);
+
+    border-radius: 18px;
+
+    padding: 18px;
+
+    box-shadow: 0 18px 35px rgba(0,0,0,.25);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+
+    width: 100%;
+
+    padding: 16px;
+
+    text-align: center;
+
+    font-size: 1.05rem;
+
+    border-bottom: 1px solid rgba(255,255,255,.08);
+  }
+
+  .nav-links a:last-child {
+    border-bottom: none;
+  }
+
 }

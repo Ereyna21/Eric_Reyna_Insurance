@@ -1,5 +1,7 @@
 const calculator = document.getElementById("needsCalculator");
 const resultBox = document.getElementById("calculatorResult");
+const menuToggle = document.getElementById("menuToggle");
+const navLinks = document.getElementById("navLinks");
 
 function formatMoney(amount) {
   return amount.toLocaleString("en-US", {
@@ -125,3 +127,18 @@ if (calculator) {
     });
   });
 }
+
+if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("active");
+  
+      menuToggle.textContent = navLinks.classList.contains("active") ? "✕" : "☰";
+    });
+  
+    navLinks.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("active");
+        menuToggle.textContent = "☰";
+      });
+    });
+  }
