@@ -228,11 +228,12 @@
 
     <div class="calculator-box">
       <form id="needsCalculator">
-        <input type="number" id="age" name="age" placeholder="Age" required />
+        <input type="number" id="age" name="age" placeholder="Age" min="0" max="120" step="1" required />
         <input type="text" id="income" name="income" placeholder="Annual Household Income" inputmode="numeric"
           required />
         <input type="text" id="mortgage" name="mortgage" placeholder="Remaining Mortgage Balance" inputmode="numeric" />
-        <input type="number" id="children" name="children" placeholder="Number of Children" />
+        <input type="number" id="children" name="children" placeholder="Number of Dependent Children" min="0" max="20"
+          step="1" />
         <input type="text" id="existingCoverage" name="existingCoverage" placeholder="Existing Life Insurance Coverage"
           inputmode="numeric" />
         <input type="text" id="savings" name="savings" placeholder="Savings Available for Family" inputmode="numeric" />
