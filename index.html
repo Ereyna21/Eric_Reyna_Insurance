@@ -207,32 +207,21 @@
   <section id="calculator" class="calculator-section">
     <h2>Life Insurance Needs Calculator</h2>
     <p class="section-intro">
-      Get a quick estimate of how much life insurance coverage you may want to consider.
+      Answer a few simple questions to get an educational estimate of how much coverage you may want to consider.
     </p>
-
+  
     <div class="calculator-box">
       <form id="needsCalculator">
-        <input type="number" id="age" placeholder="Age" />
-
-        <select id="married">
-          <option value="0">Are you married?</option>
-          <option value="1">Yes</option>
-          <option value="0">No</option>
-        </select>
-
-        <select id="children">
-          <option value="0">Do you have children?</option>
-          <option value="1">Yes</option>
-          <option value="0">No</option>
-        </select>
-
-        <input type="number" id="mortgage" placeholder="Mortgage Balance" />
-        <input type="number" id="income" placeholder="Annual Income" />
+        <input type="number" id="age" placeholder="Age" required />
+        <input type="number" id="income" placeholder="Annual Income" required />
+        <input type="number" id="mortgage" placeholder="Mortgage Balance / Debt" />
+        <input type="number" id="children" placeholder="Number of Children" />
         <input type="number" id="existingCoverage" placeholder="Existing Life Insurance Coverage" />
-
-        <button type="submit">Estimate Coverage</button>
+        <input type="number" id="savings" placeholder="Savings Available for Family" />
+  
+        <button type="submit">Calculate My Needs</button>
       </form>
-
+  
       <div id="calculatorResult" class="calculator-result"></div>
     </div>
   </section>

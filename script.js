@@ -1,58 +1,93 @@
 const calculator = document.getElementById("needsCalculator");
 const resultBox = document.getElementById("calculatorResult");
 
-if ("scrollRestoration" in history) {
-    history.scrollRestoration = "manual";
-  }
-  
-  window.addEventListener("load", () => {
-    if (!window.location.hash) {
-      window.scrollTo(0, 0);
-    }
+function formatMoney(amount) {
+  return amount.toLocaleString("en-US", {
+    style: "currency",
+    currency: "USD",
+    maximumFractionDigits: 0
   });
+}
 
 if (calculator) {
   calculator.addEventListener("submit", function (event) {
     event.preventDefault();
 
-    const married = Number(document.getElementById("married").value);
-    const children = Number(document.getElementById("children").value);
-    const mortgage = Number(document.getElementById("mortgage").value) || 0;
     const income = Number(document.getElementById("income").value) || 0;
+    const mortgage = Number(document.getElementById("mortgage").value) || 0;
+    const children = Number(document.getElementById("children").value) || 0;
     const existingCoverage = Number(document.getElementById("existingCoverage").value) || 0;
+    const savings = Number(document.getElementById("savings").value) || 0;
 
-    let recommendedCoverage = income * 10 + mortgage;
+    const incomeReplacement = income * 10;
+    const finalExpenses = 25000;
+    const childrenNeeds = children * 50000;
 
-    if (married === 1) {
-      recommendedCoverage += income * 2;
+    let totalNeed =
+      incomeReplacement +
+      mortgage +
+      finalExpenses +
+      childrenNeeds -
+      existingCoverage -
+      savings;
+
+    if (totalNeed < 0) {
+      totalNeed = 0;
     }
-
-    if (children === 1) {
-      recommendedCoverage += 100000;
-    }
-
-    recommendedCoverage -= existingCoverage;
-
-    if (recommendedCoverage < 0) {
-      recommendedCoverage = 0;
-    }
-
-    const formattedCoverage = recommendedCoverage.toLocaleString("en-US", {
-      style: "currency",
-      currency: "USD",
-      maximumFractionDigits: 0
-    });
 
     resultBox.style.display = "block";
+
     resultBox.innerHTML = `
-      <h3>Your Estimated Coverage Need</h3>
-      <p class="estimate">${formattedCoverage}</p>
-      <p>
-        This is a simple educational estimate based on income, mortgage balance,
-        family needs, and current coverage. A personalized review can help determine
-        what amount and product type may fit your situation.
-      </p>
-      <a href="#contact">Request a Personalized Quote</a>
+      <div class="result-summary">
+        <h3>Your Estimated Life Insurance Need</h3>
+        <p class="estimate">${formatMoney(totalNeed)}</p>
+        <p>Based on the information you provided.</p>
+        <a href="#contact">Request My Personalized Quote</a>
+      </div>
+
+      <div class="breakdown-card">
+        <h3>Needs Breakdown</h3>
+
+        <div class="breakdown-row">
+          <span>Income Replacement (10 years)</span>
+          <strong>${formatMoney(incomeReplacement)}</strong>
+        </div>
+
+        <div class="breakdown-row">
+          <span>Mortgage / Debt</span>
+          <strong>${formatMoney(mortgage)}</strong>
+        </div>
+
+        <div class="breakdown-row">
+          <span>Children's Future Needs</span>
+          <strong>${formatMoney(childrenNeeds)}</strong>
+        </div>
+
+        <div class="breakdown-row">
+          <span>Final Expenses</span>
+          <strong>${formatMoney(finalExpenses)}</strong>
+        </div>
+
+        <div class="breakdown-row">
+          <span>Existing Life Insurance</span>
+          <strong>-${formatMoney(existingCoverage)}</strong>
+        </div>
+
+        <div class="breakdown-row">
+          <span>Savings Available</span>
+          <strong>-${formatMoney(savings)}</strong>
+        </div>
+
+        <div class="breakdown-row total">
+          <span>Estimated Coverage Need</span>
+          <strong>${formatMoney(totalNeed)}</strong>
+        </div>
+
+        <p class="calculator-note">
+          This calculator is for educational purposes only and does not guarantee coverage, approval, or pricing.
+          A personalized review can help determine what amount and type of coverage may fit your situation.
+        </p>
+      </div>
     `;
   });
 }
