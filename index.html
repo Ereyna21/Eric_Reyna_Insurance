@@ -228,12 +228,14 @@
 
     <div class="calculator-box">
       <form id="needsCalculator">
-        <input type="number" id="age" placeholder="Age" required />
-        <input type="number" id="income" placeholder="Annual Income" required />
-        <input type="number" id="mortgage" placeholder="Mortgage Balance / Debt" />
-        <input type="number" id="children" placeholder="Number of Children" />
-        <input type="number" id="existingCoverage" placeholder="Existing Life Insurance Coverage" />
-        <input type="number" id="savings" placeholder="Savings Available for Family" />
+        <input type="number" id="age" name="age" placeholder="Age" required />
+        <input type="text" id="income" name="income" placeholder="Annual Household Income" inputmode="numeric"
+          required />
+        <input type="text" id="mortgage" name="mortgage" placeholder="Remaining Mortgage Balance" inputmode="numeric" />
+        <input type="number" id="children" name="children" placeholder="Number of Children" />
+        <input type="text" id="existingCoverage" name="existingCoverage" placeholder="Existing Life Insurance Coverage"
+          inputmode="numeric" />
+        <input type="text" id="savings" name="savings" placeholder="Savings Available for Family" inputmode="numeric" />
 
         <button type="submit">Calculate My Needs</button>
       </form>
