@@ -33,38 +33,45 @@
 
     <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
 
-<aside class="mobile-drawer" id="mobileDrawer">
-  <div class="mobile-drawer-header">
-    <div>
-      <h3>Eric Reyna Insurance</h3>
-      <p>Licensed Texas General Lines Agent</p>
-    </div>
+    <aside class="mobile-drawer" id="mobileDrawer">
+      <div class="mobile-drawer-header">
+        <div class="mobile-drawer-profile">
+          <img src="images/eric-headshot.jpg" alt="Eric Reyna" class="mobile-drawer-photo" />
 
-    <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Close menu">
-      ✕
-    </button>
-  </div>
+          <div>
+            <h3>Eric Reyna</h3>
+            <p>
+              Licensed Texas<br />
+              General Lines Agent
+            </p>
+          </div>
+        </div>
 
-  <div class="mobile-drawer-links">
-    <a href="#top">🏠 Home</a>
-    <a href="#about">👤 About</a>
-    <a href="#services">🛡 Coverage</a>
-    <a href="#calculator">🧮 Calculator</a>
-    <a href="#carriers">🏢 Carriers</a>
-    <a href="#faq">❓ FAQ</a>
-    <a href="#contact">✉ Contact</a>
-  </div>
+        <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Close menu">
+          ✕
+        </button>
+      </div>
 
-  <div class="mobile-drawer-actions">
-    <a href="tel:9568933429" class="mobile-call-btn">📞 Call Eric</a>
-    <a href="#contact" class="mobile-quote-btn">Request Free Consultation</a>
-  </div>
+      <div class="mobile-drawer-links">
+        <a href="#top">🏠 Home</a>
+        <a href="#about">👤 About</a>
+        <a href="#services">🛡 Coverage</a>
+        <a href="#calculator">🧮 Calculator</a>
+        <a href="#carriers">🏢 Carriers</a>
+        <a href="#faq">❓ FAQ</a>
+        <a href="#contact">✉ Contact</a>
+      </div>
 
-  <p class="mobile-drawer-footer">
-    Texas License #3247492<br />
-    Serving Families Throughout Texas
-  </p>
-</aside>
+      <div class="mobile-drawer-actions">
+        <a href="tel:9568933429" class="mobile-call-btn">📞 Call Eric</a>
+        <a href="#contact" class="mobile-quote-btn">Request Free Consultation</a>
+      </div>
+
+      <p class="mobile-drawer-footer">
+        Texas License #3247492<br />
+        Serving Families Throughout Texas
+      </p>
+    </aside>
 
     <div class="hero-layout">
       <div class="hero-content">
@@ -400,33 +407,33 @@
   <section id="contact" class="contact">
     <div class="contact-header">
       <h2>Let’s Find the Right Coverage Together</h2>
-  
+
       <p>
         Whether you're protecting your family, paying off a mortgage, planning for
         retirement, or covering final expenses, I’m here to help you understand
         your options. Every consultation is free and there’s no obligation.
       </p>
     </div>
-  
+
     <div class="contact-form-card">
       <h3>Request Your Free Consultation</h3>
-  
+
       <form name="quote-request" method="POST" data-netlify="true" netlify>
         <input type="hidden" name="form-name" value="quote-request" />
-  
+
         <input type="text" name="name" placeholder="Full Name" required />
-  
+
         <input type="email" name="email" placeholder="Email Address" required />
-  
+
         <input type="tel" name="phone" placeholder="Phone Number" required />
-  
+
         <select name="preferred-contact" required>
           <option value="">Preferred Contact Method</option>
           <option value="Phone Call">Phone Call</option>
           <option value="Text Message">Text Message</option>
           <option value="Email">Email</option>
         </select>
-  
+
         <select name="coverage-interest" required>
           <option value="">Coverage Interested In</option>
           <option value="Term Life">Term Life Insurance</option>
@@ -437,12 +444,9 @@
           <option value="Annuities">Annuities</option>
           <option value="Not Sure Yet">Not Sure Yet</option>
         </select>
-  
-        <textarea
-          name="message"
-          placeholder="Tell me a little about what you're looking for..."
-        ></textarea>
-  
+
+        <textarea name="message" placeholder="Tell me a little about what you're looking for..."></textarea>
+
         <label class="consent-checkbox">
           <input type="checkbox" name="contact-consent" required />
           <span>
@@ -451,9 +455,9 @@
             insurance. Message and data rates may apply.
           </span>
         </label>
-  
+
         <p class="form-note">Free consultation • No obligation • No pressure</p>
-  
+
         <button type="submit">Request My Free Consultation</button>
       </form>
     </div>

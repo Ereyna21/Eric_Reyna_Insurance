@@ -137,6 +137,7 @@ if (calculator) {
 function openDrawer() {
   mobileDrawer.classList.add("active");
   mobileOverlay.classList.add("active");
+  document.body.classList.add("menu-open");
 
   document.body.style.overflow = "hidden";
 }
@@ -144,6 +145,7 @@ function openDrawer() {
 function closeDrawer() {
   mobileDrawer.classList.remove("active");
   mobileOverlay.classList.remove("active");
+  document.body.classList.remove("menu-open");
 
   document.body.style.overflow = "";
 }
