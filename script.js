@@ -1,7 +1,9 @@
 const calculator = document.getElementById("needsCalculator");
 const resultBox = document.getElementById("calculatorResult");
 const menuToggle = document.getElementById("menuToggle");
-const navLinks = document.getElementById("navLinks");
+const mobileDrawer = document.getElementById("mobileDrawer");
+const mobileOverlay = document.getElementById("mobileMenuOverlay");
+const mobileDrawerClose = document.getElementById("mobileDrawerClose");
 
 function formatMoney(amount) {
   return amount.toLocaleString("en-US", {
@@ -128,17 +130,42 @@ if (calculator) {
   });
 }
 
-if (menuToggle && navLinks) {
-    menuToggle.addEventListener("click", () => {
-      navLinks.classList.toggle("active");
-  
-      menuToggle.textContent = navLinks.classList.contains("active") ? "✕" : "☰";
-    });
-  
-    navLinks.querySelectorAll("a").forEach((link) => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("active");
-        menuToggle.textContent = "☰";
-      });
-    });
+/* ==========================================
+   Mobile Drawer
+========================================== */
+
+function openDrawer() {
+  mobileDrawer.classList.add("active");
+  mobileOverlay.classList.add("active");
+
+  document.body.style.overflow = "hidden";
+}
+
+function closeDrawer() {
+  mobileDrawer.classList.remove("active");
+  mobileOverlay.classList.remove("active");
+
+  document.body.style.overflow = "";
+}
+
+if (menuToggle) {
+  menuToggle.addEventListener("click", openDrawer);
+}
+
+if (mobileDrawerClose) {
+  mobileDrawerClose.addEventListener("click", closeDrawer);
+}
+
+if (mobileOverlay) {
+  mobileOverlay.addEventListener("click", closeDrawer);
+}
+
+document.querySelectorAll(".mobile-drawer-links a").forEach((link) => {
+  link.addEventListener("click", closeDrawer);
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closeDrawer();
   }
+});

@@ -10,7 +10,7 @@
 
 <body>
 
-  <header class="hero">
+  <header id="top" class="hero">
     <nav>
       <h2>Eric Reyna Insurance</h2>
 
@@ -19,7 +19,7 @@
       </button>
 
       <div class="nav-links" id="navLinks">
-        <a href="/">Home</a>
+        <a href="#top">Home</a>
         <a href="#about">About</a>
         <a href="#services">Coverage</a>
         <a href="#calculator">Calculator</a>
@@ -30,6 +30,41 @@
 
       <a href="#contact" class="nav-btn">Request a Quote</a>
     </nav>
+
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+
+<aside class="mobile-drawer" id="mobileDrawer">
+  <div class="mobile-drawer-header">
+    <div>
+      <h3>Eric Reyna Insurance</h3>
+      <p>Licensed Texas General Lines Agent</p>
+    </div>
+
+    <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Close menu">
+      ✕
+    </button>
+  </div>
+
+  <div class="mobile-drawer-links">
+    <a href="#top">🏠 Home</a>
+    <a href="#about">👤 About</a>
+    <a href="#services">🛡 Coverage</a>
+    <a href="#calculator">🧮 Calculator</a>
+    <a href="#carriers">🏢 Carriers</a>
+    <a href="#faq">❓ FAQ</a>
+    <a href="#contact">✉ Contact</a>
+  </div>
+
+  <div class="mobile-drawer-actions">
+    <a href="tel:9568933429" class="mobile-call-btn">📞 Call Eric</a>
+    <a href="#contact" class="mobile-quote-btn">Request Free Consultation</a>
+  </div>
+
+  <p class="mobile-drawer-footer">
+    Texas License #3247492<br />
+    Serving Families Throughout Texas
+  </p>
+</aside>
 
     <div class="hero-layout">
       <div class="hero-content">

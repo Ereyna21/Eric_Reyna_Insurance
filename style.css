@@ -965,3 +965,192 @@ footer a:hover {
     scroll-margin-top: 120px;
   }
 }
+
+/*==================================================
+  MOBILE DRAWER
+==================================================*/
+
+.mobile-menu-overlay{
+
+  position:fixed;
+  inset:0;
+  
+  background:rgba(0,0,0,.55);
+  
+  backdrop-filter:blur(4px);
+  
+  opacity:0;
+  
+  visibility:hidden;
+  
+  transition:.35s;
+  
+  z-index:998;
+  
+  }
+  
+  .mobile-menu-overlay.active{
+  
+  opacity:1;
+  
+  visibility:visible;
+  
+  }
+  
+  .mobile-drawer{
+  
+  position:fixed;
+  
+  top:0;
+  
+  right:0;
+  
+  width:370px;
+  
+  max-width:90vw;
+  
+  height:100vh;
+  
+  background:#081d3d;
+  
+  color:white;
+  
+  padding:32px;
+  
+  display:flex;
+  
+  flex-direction:column;
+  
+  transform:translateX(100%);
+  
+  transition:transform .35s ease;
+  
+  box-shadow:-20px 0 45px rgba(0,0,0,.35);
+  
+  overflow-y:auto;
+  
+  z-index:999;
+  
+  }
+  
+  .mobile-drawer.active{
+  
+  transform:translateX(0);
+  
+  }
+
+  /* ==========================================
+   Drawer Header
+========================================== */
+
+.mobile-drawer-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 35px;
+}
+
+.mobile-drawer-header h3 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.mobile-drawer-header p {
+  margin-top: 6px;
+  color: rgba(255,255,255,.75);
+  font-size: .9rem;
+  line-height: 1.5;
+}
+
+.mobile-drawer-close {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: .3s;
+}
+
+.mobile-drawer-close:hover {
+  color: #d4af37;
+  transform: rotate(90deg);
+}
+
+/* ==========================================
+   Drawer Links
+========================================== */
+
+.mobile-drawer-links {
+  display: flex;
+  flex-direction: column;
+  margin: 25px 0;
+}
+
+.mobile-drawer-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+  transition: all .25s ease;
+}
+
+.mobile-drawer-links a:hover {
+  color: #d4af37;
+  padding-left: 12px;
+}
+
+/* ==========================================
+   Drawer Buttons
+========================================== */
+
+.mobile-drawer-actions {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mobile-call-btn,
+.mobile-quote-btn {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding: 15px;
+  border-radius: 999px;
+  font-weight: 700;
+}
+
+.mobile-call-btn {
+  border: 2px solid rgba(255,255,255,.2);
+  color: white;
+}
+
+.mobile-call-btn:hover {
+  background: white;
+  color: #081d3d;
+}
+
+.mobile-quote-btn {
+  background: #d4af37;
+  color: #081d3d;
+}
+
+.mobile-quote-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(212,175,55,.35);
+}
+
+/* ==========================================
+   Drawer Footer
+========================================== */
+
+.mobile-drawer-footer {
+  margin-top: 30px;
+  text-align: center;
+  color: rgba(255,255,255,.75);
+  font-size: .85rem;
+  line-height: 1.8;
+}
