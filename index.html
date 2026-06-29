@@ -365,40 +365,60 @@
   <section id="contact" class="contact">
     <div class="contact-header">
       <h2>Let’s Find the Right Coverage Together</h2>
+  
       <p>
-        Whether you're protecting your family, paying off a mortgage, planning for retirement,
-        or covering final expenses, I’m here to help you understand your options.
-        Every consultation is free and there’s no obligation.
+        Whether you're protecting your family, paying off a mortgage, planning for
+        retirement, or covering final expenses, I’m here to help you understand
+        your options. Every consultation is free and there’s no obligation.
       </p>
     </div>
-
+  
     <div class="contact-form-card">
       <h3>Request Your Free Consultation</h3>
-
+  
       <form name="quote-request" method="POST" data-netlify="true" netlify>
         <input type="hidden" name="form-name" value="quote-request" />
-
+  
         <input type="text" name="name" placeholder="Full Name" required />
+  
         <input type="email" name="email" placeholder="Email Address" required />
+  
         <input type="tel" name="phone" placeholder="Phone Number" required />
-
-        <select name="coverage" required>
+  
+        <select name="preferred-contact" required>
+          <option value="">Preferred Contact Method</option>
+          <option value="Phone Call">Phone Call</option>
+          <option value="Text Message">Text Message</option>
+          <option value="Email">Email</option>
+        </select>
+  
+        <select name="coverage-interest" required>
           <option value="">Coverage Interested In</option>
-          <option value="Term Life">Term Life</option>
-          <option value="Whole Life">Whole Life</option>
+          <option value="Term Life">Term Life Insurance</option>
+          <option value="Whole Life">Whole Life Insurance</option>
           <option value="Final Expense">Final Expense</option>
           <option value="Mortgage Protection">Mortgage Protection</option>
           <option value="Indexed Universal Life">Indexed Universal Life (IUL)</option>
           <option value="Annuities">Annuities</option>
           <option value="Not Sure Yet">Not Sure Yet</option>
         </select>
-
-        <textarea name="message" placeholder="Additional questions or details"></textarea>
-
-        <p class="form-note">
-          Free consultation • No obligation • No pressure
-        </p>
-
+  
+        <textarea
+          name="message"
+          placeholder="Tell me a little about what you're looking for..."
+        ></textarea>
+  
+        <label class="consent-checkbox">
+          <input type="checkbox" name="contact-consent" required />
+          <span>
+            I authorize Eric Reyna Insurance to contact me by phone, text, or email
+            regarding my insurance inquiry. Consent is not required to purchase
+            insurance. Message and data rates may apply.
+          </span>
+        </label>
+  
+        <p class="form-note">Free consultation • No obligation • No pressure</p>
+  
         <button type="submit">Request My Free Consultation</button>
       </form>
     </div>

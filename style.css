@@ -738,6 +738,33 @@ form button {
 }
 
 /* ===========================
+   Consent Checkbox
+=========================== */
+
+.consent-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin: 20px 0;
+  text-align: left;
+  cursor: pointer;
+}
+
+.consent-checkbox input[type="checkbox"] {
+  margin-top: 3px;
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  cursor: pointer;
+}
+
+.consent-checkbox span {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* ===========================
    Disclaimer
 =========================== */
 
