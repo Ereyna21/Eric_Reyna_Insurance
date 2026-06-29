@@ -1,6 +1,8 @@
 const calculator = document.getElementById("needsCalculator");
 const resultBox = document.getElementById("calculatorResult");
-const menuToggle = document.getElementById("menuToggle");
+const menuToggle =
+  document.getElementById("mobileMenuToggle") ||
+  document.getElementById("menuToggle");
 const mobileDrawer = document.getElementById("mobileDrawer");
 const mobileOverlay = document.getElementById("mobileMenuOverlay");
 const mobileDrawerClose = document.getElementById("mobileDrawerClose");
